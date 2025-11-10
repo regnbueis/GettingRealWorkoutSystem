@@ -14,9 +14,9 @@ namespace UmbracoWorkoutSystem
         public int TimeSpentInMinutes { get; set; }
         public string ImageSource { get; set; }
         public bool Favorite { get; set; }
-        public string Tag { get; set; }
+        public Tag Tags { get; set; }
 
-        public Exercise(string title, Guid exerciseId, string description, int timeSpentInMinutes, string imageSource, bool favorite, string tag)
+        public Exercise(string title, Guid exerciseId, string description, int timeSpentInMinutes, string imageSource, bool favorite, Tag tag1)
         {
             Title = title;
             ExerciseId = exerciseId;
@@ -24,7 +24,7 @@ namespace UmbracoWorkoutSystem
             TimeSpentInMinutes = timeSpentInMinutes;
             ImageSource = imageSource;
             Favorite = favorite;
-            Tag = tag;
+            Tags = tag1; //vi har her valgt at hver øvelse kun kan have 1 tag for at begrænse kompleksiteten. Tilføj funktionalitet til flere tags hvis vi har tid
         }
     }
 }
