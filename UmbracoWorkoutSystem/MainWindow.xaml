@@ -5,8 +5,193 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UmbracoWorkoutSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        Height="450" 
+        Width="800" 
+        WindowStyle="SingleBorderWindow">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" CornerRadius="8">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
+        <Button x:Name="btnExcersice" 
+                Content="Excercise"
+                Background="#FF1E90FF"
+                Foreground="White"
+                HorizontalAlignment="Left" 
+                Margin="23,101,0,0" 
+                VerticalAlignment="Top" 
+                Height="28" 
+                Width="165" 
+                FontFamily="Cascadia Mono SemiBold" 
+                Click="btnExcersice_Click" 
+                FontSize="14"/>
+
+        <Button 
+                x:Name="btnAlternativeAdvice" 
+                Content="Alternative Advice"
+                Background="#FF1E90FF"
+                Foreground="White"
+                HorizontalAlignment="Left" 
+                Margin="23,172,0,0" 
+                VerticalAlignment="Top" 
+                Height="28" 
+                Width="165" 
+                FontFamily="Cascadia Mono SemiBold" 
+                FontSize="14" Click="btnAlternativeAdvice_Click"/>
+        
+        <Button x:Name="btnEvents" 
+                Content="Events" 
+                Background="#FF1E90FF"
+                Foreground="White"
+                HorizontalAlignment="Left" 
+                Margin="23,253,0,0" 
+                VerticalAlignment="Top" 
+                Height="28" 
+                Width="165" 
+                FontFamily="Cascadia Mono SemiBold" 
+                FontSize="14" Click="btnEvents_Click"/>
+        
+        <Button x:Name="btnProfile" 
+                Content="Profile" 
+                Background="#FF1E90FF"
+                Foreground="White"
+                HorizontalAlignment="Left" 
+                Margin="23,325,0,0" 
+                VerticalAlignment="Top" 
+                Height="28" 
+                Width="165"
+                FontFamily="Cascadia Mono SemiBold" 
+                FontSize="14" Click="btnProfile_Click"/>
+        
+        <Label x:Name="lblCompany" 
+               Content="Umbarco"
+               Foreground="#FF1E90FF"
+               HorizontalAlignment="Left" 
+               Margin="10,10,0,0" 
+               VerticalAlignment="Top" 
+               Height="39" 
+               Width="129" 
+               FontFamily="Cascadia Mono SemiBold" 
+               FontSize="24"/>
+        
+        <Image x:Name="imgLogo" 
+               HorizontalAlignment="Left" 
+               Height="38" 
+               Margin="139,10,0,0" 
+               VerticalAlignment="Top" 
+               Width="46" 
+               Source="C:\Users\Martin\Desktop\Wallpaper\SkureHans.png"/>
+        
+        <Label x:Name="lblOverskrift" 
+               Content="Alternative Advice"
+               HorizontalAlignment="Left" 
+               Margin="289,13,0,0" 
+               VerticalAlignment="Top" 
+               Width="465" 
+               Height="32" 
+               FontFamily="Cascadia Mono SemiBold" 
+               FontSize="24" 
+               HorizontalContentAlignment="Center"/>
+        
+        <Image x:Name="imgBanner" 
+               HorizontalAlignment="Left" 
+               Height="110" 
+               Margin="289,60,0,0" 
+               VerticalAlignment="Top" 
+               Width="508"
+               Source="C:\Users\Martin\Desktop\Wallpaper\PeopleWalking1.png"/>
+        <Button x:Name="btnWalkAndTalk" 
+                Content="Walk-And-Talk" 
+                HorizontalAlignment="Left" 
+                Margin="289,210,0,0" 
+                VerticalAlignment="Top" 
+                Width="451" 
+                Height="40" 
+                FontFamily="Cascadia Mono SemiBold" 
+                FontSize="24" Click="btnWalkAndTalk_Click"/>
+        <Button x:Name="btnYogaBall" 
+                Content="Yogaball to move it all" 
+                HorizontalAlignment="Left" 
+                Margin="289,280,0,0" 
+                VerticalAlignment="Top" 
+                Width="451" 
+                Height="40" 
+                FontFamily="Cascadia Mono SemiBold" 
+                FontSize="24" Click="btnYogaBall_Click"/>
+        <Button x:Name="btnUseStairs" 
+                Content="The stair is fair" 
+                HorizontalAlignment="Left" 
+                Margin="289,349,0,0" 
+                VerticalAlignment="Top" 
+                Width="451" 
+                Height="40" 
+                FontFamily="Cascadia Mono SemiBold" 
+                FontSize="24" Click="btnUseStairs_Click"/>
+        <Button x:Name="btnLog" 
+                Content="Log in" 
+                HorizontalAlignment="Left" 
+                Margin="730,10,0,0" 
+                VerticalAlignment="Top" 
+                Height="20" 
+                Width="60" 
+                FontFamily="Cascadia Mono SemiBold" 
+                FontSize="16" Click="btnLog_Click"/>
+
 
     </Grid>
 </Window>

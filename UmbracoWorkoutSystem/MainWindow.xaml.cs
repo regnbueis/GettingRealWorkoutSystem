@@ -20,5 +20,45 @@ namespace UmbracoWorkoutSystem
         {
             InitializeComponent();
         }
+
+        private void btnExcersice_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAlternativeAdvice_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnEvents_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnProfile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnLog_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnWalkAndTalk_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnYogaBall_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnUseStairs_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
