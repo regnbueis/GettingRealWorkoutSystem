@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UmbracoWorkoutSystem.Models;
 
-namespace UmbracoWorkoutSystem
+namespace UmbracoWorkoutSystem.ViewModels
 {
     public class AltWorkTypeRepository
     {

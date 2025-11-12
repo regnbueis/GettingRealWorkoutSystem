@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UmbracoWorkoutSystem
+namespace UmbracoWorkoutSystem.Models
 {
     public class Exercise
     {
@@ -14,9 +14,12 @@ namespace UmbracoWorkoutSystem
         public int TimeSpentInMinutes { get; set; }
         public string ImageSource { get; set; }
         public bool Favorite { get; set; }
-        public Tag Tags { get; set; }
+        public string Tagging {  get; set; }
+        //public Tag Tags { get; set; } - fravalg af enums som tags, da det er nemmere for os at håndtere string separation, især ved flere tags
 
-        public Exercise(string title, Guid exerciseId, string description, int timeSpentInMinutes, string imageSource, bool favorite, Tag tag1)
+        public Exercise()
+        { }
+        public Exercise(string title, Guid exerciseId, string description, int timeSpentInMinutes, string imageSource, bool favorite, string tags)
         {
             Title = title;
             ExerciseId = exerciseId;
@@ -24,7 +27,7 @@ namespace UmbracoWorkoutSystem
             TimeSpentInMinutes = timeSpentInMinutes;
             ImageSource = imageSource;
             Favorite = favorite;
-            Tags = tag1; //vi har her valgt at hver øvelse kun kan have 1 tag for at begrænse kompleksiteten. Tilføj funktionalitet til flere tags hvis vi har tid
+            Tagging = tags;
         }
     }
 }

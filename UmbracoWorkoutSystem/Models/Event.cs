@@ -4,20 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UmbracoWorkoutSystem
+namespace UmbracoWorkoutSystem.Models
 {
-    public class AltWorkType
+    public class Event
     {
         public string Title { get; set; }
-        public Guid AltWorkTypeId { get; set; }
+        public Guid EventId { get; set; }
         public string Description { get; set; }
+        public DateTime Date {  get; set; }
         public string ImageSource { get; set; }
 
-        public AltWorkType(string title, Guid altWorkTypeId, string description, string imageSource)
-        { 
+        public Event(string title, Guid eventId, string description, DateTime date, string imageSource)
+        {
             Title = title;
-            AltWorkTypeId = altWorkTypeId;
+            EventId = eventId;
             Description = description;
+            Date = date;
             ImageSource = imageSource;
         }
     }
