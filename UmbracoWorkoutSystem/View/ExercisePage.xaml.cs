@@ -24,5 +24,7 @@ namespace UmbracoWorkoutSystem.View
         {
             InitializeComponent();
         }
+
+
     }
 }

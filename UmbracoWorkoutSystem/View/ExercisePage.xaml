@@ -8,7 +8,7 @@
   d:DesignHeight="730" d:DesignWidth="1000"
   Title="ExercisePage" Background="#f1f0ee">
 
-    <Grid>
+    <Grid">
         <TextBlock HorizontalAlignment="Left" Margin="210,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="118" Width="480" FontSize="22" FontWeight="Bold"><Run Language="da-dk" Text="IKKE FLERE ØVELSER IDAG"/><LineBreak/><Run Language="da-dk"/><LineBreak/><Run Language="da-dk"/><LineBreak/><Run Language="da-dk" Text="BASDGK"/><LineBreak/><Run Language="da-dk"/></TextBlock>
     </Grid>
 </Page>
