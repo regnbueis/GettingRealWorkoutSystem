@@ -7,7 +7,7 @@ using UmbracoWorkoutSystem.Domain;
 
 namespace UmbracoWorkoutSystem.Application
 {
-    class ExerciseController
+    public class ExerciseController
     {
         public Tags ExerciseTagList()
         {

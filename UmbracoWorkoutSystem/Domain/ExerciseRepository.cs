@@ -42,7 +42,7 @@ namespace UmbracoWorkoutSystem.Domain
         {
             //er der en smart måde evt. at overloade metoden, så jeg ikke skal lave det her tre gange?
             //jeg kan heller ikke gennemskue hvordan man skal putte alle argumenterne ind uden at overdo it.
-            Exercise exercise = Get(id);
+            Exercise exercise = GetById(id);
 
             if (exercise != null)
             {

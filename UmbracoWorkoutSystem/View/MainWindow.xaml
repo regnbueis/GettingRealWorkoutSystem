@@ -7,7 +7,11 @@
         mc:Ignorable="d"
            Title="MainWindow" Height="800" Width="1000" Background="#f1f0ee" ResizeMode="CanMinimize">
     <Grid Margin="0,10,0,-16">
-        <DockPanel LastChildFill="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="437*"/>
+            <RowDefinition Height="353*"/>
+        </Grid.RowDefinitions>
+        <DockPanel LastChildFill="True" Grid.RowSpan="2">
             <!-- Navigation øverst -->
             <Grid x:Name="gridNavigation" DockPanel.Dock="Top" Height="71" Margin="0">
                 <Grid.ColumnDefinitions>
@@ -18,7 +22,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image Source="C:\Users\Martin\Desktop\umbraco_wide_logo_blue.png" Stretch="Uniform" MouseDown="Image_MouseDown" Grid.Column="0" Margin="15,-2,10,-3"/>
+                <Image Source="C:\Users\nnord\Downloads\umbraco_wide_logo_blue.png" Stretch="Uniform" MouseDown="Image_MouseDown" Grid.Column="0" Margin="15,-2,10,-3"/>
                 <Button x:Name="btnØvelser" Grid.Column="1" Content="Øvelser" Click="btnØvelser_Click"/>
                 <Button x:Name="btnEvents" Grid.Column="2" Content="Events" IsEnabled="False" Click="btnEvents_Click"/>
                 <Button x:Name="btnAltAktiv" Grid.Column="3" Content="Alternative aktivitet" IsEnabled="False"/>

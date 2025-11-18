@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UmbracoWorkoutSystem.Application
 {
-    class Tags
+    public class Tags
     {
         public List<string> Taglist { get; }
 
