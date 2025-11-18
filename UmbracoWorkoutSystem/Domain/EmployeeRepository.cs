@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UmbracoWorkoutSystem.Models;
 
-namespace UmbracoWorkoutSystem.ViewModels
+namespace UmbracoWorkoutSystem.Domain
 {
     public class EmployeeRepository
     {

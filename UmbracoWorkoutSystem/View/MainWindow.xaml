@@ -77,8 +77,7 @@
                 VerticalAlignment="Top" 
                 Height="28" 
                 Width="165" 
-                FontFamily="Cascadia Mono SemiBold" 
-                Click="btnExcersice_Click" 
+                FontFamily="Cascadia Mono SemiBold"
                 FontSize="14"
                 />
 
@@ -93,8 +92,8 @@
                 Height="28" 
                 Width="165" 
                 FontFamily="Cascadia Mono SemiBold" 
-                FontSize="14" Click="btnAlternativeAdvice_Click"/>
-        
+                FontSize="14" />
+
         <Button x:Name="btnEvents" 
                 Content="Events" 
                 Background="#FF1E90FF"
@@ -105,7 +104,7 @@
                 Height="28" 
                 Width="165" 
                 FontFamily="Cascadia Mono SemiBold" 
-                FontSize="14" Click="btnEvents_Click"/>
+                FontSize="14" />
         
         <Button x:Name="btnProfile" 
                 Content="Profile" 
@@ -117,7 +116,7 @@
                 Height="28" 
                 Width="165"
                 FontFamily="Cascadia Mono SemiBold" 
-                FontSize="14" Click="btnProfile_Click"/>
+                FontSize="14"/>
         
         <Label x:Name="lblCompany" 
                Content="Umbraco"
@@ -161,7 +160,7 @@
                 Height="20" 
                 Width="60" 
                 FontFamily="Cascadia Mono SemiBold" 
-                FontSize="16" Click="btnLog_Click"/>
+                FontSize="16"/>
 
         <Image 
                HorizontalAlignment="Left"
