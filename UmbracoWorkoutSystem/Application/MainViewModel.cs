@@ -18,7 +18,7 @@ namespace UmbracoWorkoutSystem.Application
 
         public void StartUp()
         {
-            Persistence.InitializeRepository();
+            Persistence.Persist.InitializeRepository();
         }
 
     }

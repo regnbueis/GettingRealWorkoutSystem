@@ -5,8 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using UmbracoWorkoutSystem.Domain;
 
-namespace UmbracoWorkoutSystem.Domain
+namespace UmbracoWorkoutSystem.Persistence
 {
     public class LogRepository
     {
@@ -52,7 +53,7 @@ namespace UmbracoWorkoutSystem.Domain
             }
             catch
             {
-                throw (new Exception("Save not succesful"));
+                throw new Exception("Save not succesful");
             }
         }
 
@@ -80,7 +81,7 @@ namespace UmbracoWorkoutSystem.Domain
             return result;
 
         }
-       
-        
+
+
     }
 }

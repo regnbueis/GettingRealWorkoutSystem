@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UmbracoWorkoutSystem.Domain;
 
-namespace UmbracoWorkoutSystem.Domain
+namespace UmbracoWorkoutSystem.Persistence
 {
     public class AltWorkTypeRepository
     {
@@ -24,7 +25,7 @@ namespace UmbracoWorkoutSystem.Domain
                     Description = description,
                     ImageSource = source
                 };
-                Persistence.altWorkTypes.Add(result);
+                Persistence.Persist.altWorkTypes.Add(result);
             }
             else
                 throw new ArgumentException("Not all arguments are valid");
@@ -35,7 +36,7 @@ namespace UmbracoWorkoutSystem.Domain
 
         public void Edit(int id, string title, string description, string source)
         {
-            AltWorkType altWorkType = Get(id);
+            AltWorkType altWorkType = GetById(id);
 
             if (altWorkType != null)
             {
@@ -59,9 +60,9 @@ namespace UmbracoWorkoutSystem.Domain
 
         public void Delete(int id)
         {
-            AltWorkType a = Get(id);
+            AltWorkType a = GetById(id);
             if (a != null)
-                Persistence.altWorkTypes.Remove(a);
+                Persistence.Persist.altWorkTypes.Remove(a);
             else
                 throw new ArgumentException("Content with ID " + id + " not found");
         }
@@ -70,7 +71,7 @@ namespace UmbracoWorkoutSystem.Domain
         {
             AltWorkType result = null;
 
-            foreach (AltWorkType a in Persistence.altWorkTypes)
+            foreach (AltWorkType a in Persistence.Persist.altWorkTypes)
             {
                 if (a.AltWorkTypeId == id)
                     result = a;

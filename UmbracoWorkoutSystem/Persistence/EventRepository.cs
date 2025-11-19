@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UmbracoWorkoutSystem.Domain;
 
-namespace UmbracoWorkoutSystem.Domain
+namespace UmbracoWorkoutSystem.Persistence
 {
     public class EventRepository
     {
@@ -27,7 +28,7 @@ namespace UmbracoWorkoutSystem.Domain
                     Date = date,
                     ImageSource = source
                 };
-                Persistence.events.Add(result);
+                Persistence.Persist.events.Add(result);
             }
             else
                 throw new ArgumentException("Not all arguments are valid");
@@ -37,7 +38,7 @@ namespace UmbracoWorkoutSystem.Domain
 
         public void Edit(int id, string title, string description, DateTime date, string source)
         {
-            Event _event = Get(id);
+            Event _event = GetById(id);
 
             if (_event != null)
             {
@@ -64,9 +65,9 @@ namespace UmbracoWorkoutSystem.Domain
 
         public void Delete(int id)
         {
-            Event _event = Get(id);
+            Event _event = GetById(id);
             if (_event != null)
-                Persistence.events.Remove(_event);
+                Persistence.Persist.events.Remove(_event);
             else
                 throw new ArgumentException("Event with ID " + id + " not found");
         }
@@ -75,7 +76,7 @@ namespace UmbracoWorkoutSystem.Domain
         {
             Event result = null;
 
-            foreach (Event e in Persistence.events)
+            foreach (Event e in Persistence.Persist.events)
             {
                 if (e.EventId == id)
                     result = e;

@@ -8,5 +8,8 @@ namespace UmbracoWorkoutSystem.Application
 {
     public class LogController
     {
+
+        //TODO: Tilføj logik til at tilføje nedenstående - skal nok ligge i en controller
+        //Enums 1 = Performed, 2 = Favorited, 3 = Unfavorited
     }
 }
