@@ -15,6 +15,11 @@ namespace UmbracoWorkoutSystem.Domain
         public int ExerciseId { get; set; }
         public int LogTypeId { get; set; } //Enums 1 = Performed, 2 = Favorited, 3 = Unfavorited
 
+        public Log()
+        {
+            LogInstanceId = idCount++;
+        }
+
         public Log(int logId, DateTime logSetTime, int employeeId, int exerciseId, int logTypeId)
         {
             LogInstanceId = logId;

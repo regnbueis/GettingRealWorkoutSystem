@@ -46,7 +46,7 @@ namespace UmbracoWorkoutSystem.Domain
             {
                 using StreamWriter sw = new StreamWriter("LogPersistence.txt");
                 {
-                    var saveObject = JsonConvert.SerializeObject(AllLogs);
+                    string saveObject = JsonConvert.SerializeObject(AllLogs);
                     sw.WriteLine(saveObject);
                 }
             }
@@ -55,5 +55,32 @@ namespace UmbracoWorkoutSystem.Domain
                 throw (new Exception("Save not succesful"));
             }
         }
+
+        public static Log Add(DateTime setTime, int employeeId, int exerciseId, int logType)
+        {
+            Log result = null;
+
+            if (employeeId >= 0 &&
+                exerciseId >= 0 &&
+                logType >= 0)
+            {
+                result = new Log()
+                {
+                    LogSetTime = setTime,
+                    EmployeeId = employeeId,
+                    ExerciseId = exerciseId,
+                    LogTypeId = logType
+                };
+                AllLogs.Add(result);
+                Save();
+            }
+            else
+                throw new ArgumentException("Not all arguments are valid");
+            
+            return result;
+
+        }
+       
+        
     }
 }

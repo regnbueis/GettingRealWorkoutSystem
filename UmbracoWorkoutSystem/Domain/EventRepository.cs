@@ -11,7 +11,7 @@ namespace UmbracoWorkoutSystem.Domain
     {
         private List<Event> events = new List<Event>();
 
-        public Event AddEvent(string title, string description, DateTime date, string source)
+        public Event Add(string title, string description, DateTime date, string source)
         {
             Event result = null;
 
@@ -35,7 +35,7 @@ namespace UmbracoWorkoutSystem.Domain
             return result;
         }
 
-        public void EditEvent(int id, string title, string description, DateTime date, string source)
+        public void Edit(int id, string title, string description, DateTime date, string source)
         {
             Event _event = Get(id);
 
@@ -62,7 +62,7 @@ namespace UmbracoWorkoutSystem.Domain
                 throw new ArgumentException("Event with ID " + id + " not found");
         }
 
-        public void DeleteEvent(int id)
+        public void Delete(int id)
         {
             Event _event = Get(id);
             if (_event != null)
@@ -71,7 +71,7 @@ namespace UmbracoWorkoutSystem.Domain
                 throw new ArgumentException("Event with ID " + id + " not found");
         }
 
-        public Event Get(int id)
+        public Event GetById(int id)
         {
             Event result = null;
 

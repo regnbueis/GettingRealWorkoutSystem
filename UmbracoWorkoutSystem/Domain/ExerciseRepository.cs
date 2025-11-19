@@ -12,7 +12,7 @@ namespace UmbracoWorkoutSystem.Domain
 {
     public class ExerciseRepository
     {
-        public Exercise AddExercise(string title, string description, int timeSpent, string source, string tags)
+        public Exercise Add(string title, string description, int timeSpent, string source, string tags)
         {
             Exercise result = null;
 
@@ -38,10 +38,8 @@ namespace UmbracoWorkoutSystem.Domain
             return result;
         }
 
-        public void EditExercise(int id, string title, string description, int timeInMinutes, string source, string tags)
+        public void Edit(int id, string title, string description, int timeInMinutes, string source, string tags)
         {
-            //er der en smart måde evt. at overloade metoden, så jeg ikke skal lave det her tre gange?
-            //jeg kan heller ikke gennemskue hvordan man skal putte alle argumenterne ind uden at overdo it.
             Exercise exercise = GetById(id);
 
             if (exercise != null)
@@ -71,7 +69,6 @@ namespace UmbracoWorkoutSystem.Domain
 
             Persistence.Save();
         }
-
 
         public Exercise GetById(int id)
         {

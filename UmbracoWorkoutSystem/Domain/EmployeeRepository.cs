@@ -10,17 +10,17 @@ namespace UmbracoWorkoutSystem.Domain
     {
         private List<Employee> employees = new List<Employee>();
 
-        public void AddEmployee(Employee employee)
+        public void Add(Employee employee)
         { 
         
         }
 
-        public void EditEmployee()
+        public void Edit()
         {
 
         }
 
-        public void DeleteEmployee()
+        public void Delete()
         {
 
         }

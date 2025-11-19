@@ -9,7 +9,7 @@ namespace UmbracoWorkoutSystem.Domain
 {
     public class AltWorkTypeRepository
     {
-        public AltWorkType AddAltWorkType(string title, string description, string source)
+        public AltWorkType Add(string title, string description, string source)
         {
 
             AltWorkType result = null;
@@ -33,7 +33,7 @@ namespace UmbracoWorkoutSystem.Domain
         }
 
 
-        public void EditAltWorkType(int id, string title, string description, string source)
+        public void Edit(int id, string title, string description, string source)
         {
             AltWorkType altWorkType = Get(id);
 
@@ -57,7 +57,7 @@ namespace UmbracoWorkoutSystem.Domain
                 throw new ArgumentException("Content with ID " + id + " not found");
         }
 
-        public void DeleteAltWorkType(int id)
+        public void Delete(int id)
         {
             AltWorkType a = Get(id);
             if (a != null)
@@ -66,7 +66,7 @@ namespace UmbracoWorkoutSystem.Domain
                 throw new ArgumentException("Content with ID " + id + " not found");
         }
 
-        public AltWorkType Get(int id)
+        public AltWorkType GetById(int id)
         {
             AltWorkType result = null;
 
