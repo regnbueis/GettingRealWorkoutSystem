@@ -16,15 +16,19 @@ using System.Windows.Shapes;
 namespace UmbracoWorkoutSystem.View
 {
     /// <summary>
-    /// Interaction logic for ExercisePage.xaml
+    /// Interaction logic for ExerciseTypePage.xaml
     /// </summary>
-    public partial class ExercisePage : Page
+    public partial class ExerciseTypePage : Page
     {
-        public ExercisePage()
+        public ExerciseTypePage()
         {
             InitializeComponent();
+            
         }
 
-       
+        private void Test_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new ExercisePage());
+        }
     }
 }
