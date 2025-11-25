@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UmbracoWorkoutSystem.View;
 
 namespace UmbracoWorkoutSystem.View
 {
@@ -28,7 +29,10 @@ namespace UmbracoWorkoutSystem.View
 
         private void Test_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new ExercisePage());
+
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow.MainFrame.Navigate(new ExercisePage());
+
         }
     }
 }

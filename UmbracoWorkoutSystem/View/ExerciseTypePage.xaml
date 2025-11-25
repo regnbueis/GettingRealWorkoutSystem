@@ -11,7 +11,7 @@
         <Grid Margin="10,10,-10,-10">
             <Image Source="C:\Users\Martin\Desktop\ExcorciseBanner.png" Width="640" Height="140" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="UniformToFill" Margin="10"/>
         </Grid>
-        <Grid Margin="10,309,14,-543">
+        <Grid Margin="36,309,34,-511">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
