@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace UmbracoWorkoutSystem.Domain
+namespace UmbracoWorkoutSystem.Models
 {
     public class AltWorkType : IContent
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UmbracoWorkoutSystem.Domain
+namespace UmbracoWorkoutSystem.Models
 {
     public class Log
     {
@@ -13,7 +13,7 @@ namespace UmbracoWorkoutSystem.Domain
         public DateTime LogSetTime { get; set; }
         public int EmployeeId { get; set; }
         public int ExerciseId { get; set; }
-        public int LogTypeId { get; set; } //Enums 1 = Performed, 2 = Favorited, 3 = Unfavorited
+        public int LogTypeId { get; set; } //1 = Performed, 2 = Favorited, 3 = Unfavorited
 
         public Log()
         {

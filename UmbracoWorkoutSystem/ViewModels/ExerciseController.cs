@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UmbracoWorkoutSystem.Domain;
+using UmbracoWorkoutSystem.Models;
 using UmbracoWorkoutSystem.Persistence;
 
-namespace UmbracoWorkoutSystem.Application
+namespace UmbracoWorkoutSystem.ViewModels
 {
     public class ExerciseController
     {
@@ -19,18 +19,14 @@ namespace UmbracoWorkoutSystem.Application
 
         public List<Exercise> ChooseMuscleGroup(string tag)
         {
-            ExerciseRepository exerciseRepository = new ExerciseRepository();
-
-            List<Exercise> exercises = exerciseRepository.GetListByTag(tag);
+            List<Exercise> exercises = ExerciseRepository.GetListByTag(tag);
 
             return exercises;
         }
 
         public Exercise ChooseExercise(int id)
         {
-            ExerciseRepository exerciseRepository = new ExerciseRepository();
-
-            return exerciseRepository.GetById(id);
+            return ExerciseRepository.GetById(id);
         }
     }
 }

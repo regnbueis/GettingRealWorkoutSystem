@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11217.181 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoWorkoutSystem", "UmbracoWorkoutSystem\UmbracoWorkoutSystem.csproj", "{FF8FE825-85D5-438E-9FCD-859F563D4D3A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject3", "TestProject3\TestProject3.csproj", "{8E895690-AF1A-4A0F-A9C9-7AE82A5AF1A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{FF8FE825-85D5-438E-9FCD-859F563D4D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF8FE825-85D5-438E-9FCD-859F563D4D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF8FE825-85D5-438E-9FCD-859F563D4D3A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E895690-AF1A-4A0F-A9C9-7AE82A5AF1A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E895690-AF1A-4A0F-A9C9-7AE82A5AF1A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E895690-AF1A-4A0F-A9C9-7AE82A5AF1A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E895690-AF1A-4A0F-A9C9-7AE82A5AF1A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

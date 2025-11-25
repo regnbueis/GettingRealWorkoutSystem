@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UmbracoWorkoutSystem.Domain;
+using UmbracoWorkoutSystem.Models;
 
 namespace UmbracoWorkoutSystem.Persistence
 {
-    public class AltWorkTypeRepository
+    public static class AltWorkTypeRepository
     {
-        public AltWorkType Add(string title, string description, string source)
+        public static AltWorkType Add(string title, string description, string source)
         {
 
             AltWorkType result = null;
@@ -33,8 +33,7 @@ namespace UmbracoWorkoutSystem.Persistence
             return result;
         }
 
-
-        public void Edit(int id, string title, string description, string source)
+        public static void Edit(int id, string title, string description, string source)
         {
             AltWorkType altWorkType = GetById(id);
 
@@ -52,13 +51,13 @@ namespace UmbracoWorkoutSystem.Persistence
                         altWorkType.ImageSource = source;
                 }
                 else
-                    throw new ArgumentException("Not all arguments for exercise are valid");
+                    throw new ArgumentException("Not all arguments are valid");
             }
             else
                 throw new ArgumentException("Content with ID " + id + " not found");
         }
 
-        public void Delete(int id)
+        public static void Delete(int id)
         {
             AltWorkType a = GetById(id);
             if (a != null)
@@ -67,7 +66,7 @@ namespace UmbracoWorkoutSystem.Persistence
                 throw new ArgumentException("Content with ID " + id + " not found");
         }
 
-        public AltWorkType GetById(int id)
+        public static AltWorkType GetById(int id)
         {
             AltWorkType result = null;
 
@@ -79,5 +78,9 @@ namespace UmbracoWorkoutSystem.Persistence
             return result;
         }
 
+        public static List<AltWorkType> GetAll()
+        {
+            return Persistence.Persist.altWorkTypes;
+        }
     }
 }

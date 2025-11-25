@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UmbracoWorkoutSystem.Application
+namespace UmbracoWorkoutSystem.ViewModels
 {
     public class Tags
     {
