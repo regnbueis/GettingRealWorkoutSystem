@@ -4,17 +4,17 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UmbracoWorkoutSystem.Domain;
+using UmbracoWorkoutSystem.Models;
 
 namespace UmbracoWorkoutSystem.Persistence
 {
-    public class Persist
+    public static class Persist
     {
         public static List<Exercise> exercises;
         public static List<Event> events;
         public static List<AltWorkType> altWorkTypes;
 
-        public static void InitializeRepository()
+        public static void Initialize()
         {
             exercises = new List<Exercise>();
             events = new List<Event>();

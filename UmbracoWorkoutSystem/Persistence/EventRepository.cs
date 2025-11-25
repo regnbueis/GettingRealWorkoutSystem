@@ -4,15 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UmbracoWorkoutSystem.Domain;
+using UmbracoWorkoutSystem.Models;
 
 namespace UmbracoWorkoutSystem.Persistence
 {
-    public class EventRepository
+    public static class EventRepository
     {
-        private List<Event> events = new List<Event>();
-
-        public Event Add(string title, string description, DateTime date, string source)
+        public static Event Add(string title, string description, DateTime date, string source)
         {
             Event result = null;
 
@@ -36,7 +34,7 @@ namespace UmbracoWorkoutSystem.Persistence
             return result;
         }
 
-        public void Edit(int id, string title, string description, DateTime date, string source)
+        public static void Edit(int id, string title, string description, DateTime date, string source)
         {
             Event _event = GetById(id);
 
@@ -57,13 +55,13 @@ namespace UmbracoWorkoutSystem.Persistence
                         _event.ImageSource = source;
                 }
                 else
-                    throw new ArgumentException("Not all arguments for exercise are valid");
+                    throw new ArgumentException("Not all arguments are valid");
             }
             else
                 throw new ArgumentException("Event with ID " + id + " not found");
         }
 
-        public void Delete(int id)
+        public static void Delete(int id)
         {
             Event _event = GetById(id);
             if (_event != null)
@@ -72,7 +70,7 @@ namespace UmbracoWorkoutSystem.Persistence
                 throw new ArgumentException("Event with ID " + id + " not found");
         }
 
-        public Event GetById(int id)
+        public static Event GetById(int id)
         {
             Event result = null;
 
@@ -82,6 +80,23 @@ namespace UmbracoWorkoutSystem.Persistence
                     result = e;
             }
             return result;
+        }
+
+        public static List<Event> UpcomingEvents()
+        {
+            List<Event> nextEvents = new List<Event>();
+
+            try
+            {
+                foreach (Event e in Persistence.Persist.events)
+                {
+                    if (e.Date > DateTime.Now)
+                        nextEvents.Add(e);
+                }
+            }
+            catch { }
+
+            return nextEvents;
         }
 
     }

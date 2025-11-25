@@ -5,17 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using UmbracoWorkoutSystem.Domain;
+using UmbracoWorkoutSystem.Models;
 
 namespace UmbracoWorkoutSystem.Persistence
 {
-    public class LogRepository
+    public static class LogRepository
     {
-        public static List<Log> AllLogs;
+        public static List<Log> AllLogs = new List<Log>();
 
-        public static void InitializeRepository()
+        public static void Initialize()
         {
-            AllLogs = new List<Log>();
             try
             {
                 int logId = 0;
@@ -81,6 +80,8 @@ namespace UmbracoWorkoutSystem.Persistence
             return result;
 
         }
+
+
 
 
     }

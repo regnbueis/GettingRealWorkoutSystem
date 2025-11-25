@@ -6,14 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using UmbracoWorkoutSystem.Domain;
+using UmbracoWorkoutSystem.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace UmbracoWorkoutSystem.Persistence
 {
-    public class ExerciseRepository
+    public static class ExerciseRepository
     {
-        public Exercise Add(string title, string description, int timeSpent, string source, string tags)
+        public static Exercise Add(string title, string description, int timeSpent, string source, string tags)
         {
             Exercise result = null;
 
@@ -39,7 +39,7 @@ namespace UmbracoWorkoutSystem.Persistence
             return result;
         }
 
-        public void Edit(int id, string title, string description, int timeInMinutes, string source, string tags)
+        public static void Edit(int id, string title, string description, int timeInMinutes, string source, string tags)
         {
             Exercise exercise = GetById(id);
 
@@ -63,7 +63,7 @@ namespace UmbracoWorkoutSystem.Persistence
                         exercise.Tagging = tags;
                 }
                 else
-                    throw new ArgumentException("Not all arguments for exercise are valid");
+                    throw new ArgumentException("Not all arguments are valid");
             }
             else
                 throw new ArgumentException("Exercise with ID " + id + " not found");
@@ -71,7 +71,7 @@ namespace UmbracoWorkoutSystem.Persistence
             Persistence.Persist.Save();
         }
 
-        public Exercise GetById(int id)
+        public static Exercise GetById(int id)
         {
             Exercise result = null;
 
@@ -83,7 +83,7 @@ namespace UmbracoWorkoutSystem.Persistence
             return result;
         }
 
-        public List<Exercise> GetListByTag(string tag)
+        public static List<Exercise> GetListByTag(string tag)
         {
             List<Exercise> results = new List<Exercise>();
 
@@ -95,7 +95,7 @@ namespace UmbracoWorkoutSystem.Persistence
             return results;
         }
 
-        public void Delete(int id)
+        public static void Delete(int id)
         {
             Exercise content = GetById(id);
             if (content != null)
