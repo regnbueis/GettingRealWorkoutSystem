@@ -9,7 +9,7 @@
   Title="ExercisePage" Background="#f1f0ee">
     <Grid Margin="0,0,0,557">
         <Grid Margin="10,10,-10,-10">
-            <Image Source="\Pictures\ExcorciseBanner.png" Width="640" Height="140" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="UniformToFill" Margin="10"/>
+            <Image Source="/View/Pictures/ExcorciseBanner.png" Width="640" Height="140" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="UniformToFill" Margin="10"/>
         </Grid>
         <Grid Margin="36,309,34,-511">
             <Grid.ColumnDefinitions>
