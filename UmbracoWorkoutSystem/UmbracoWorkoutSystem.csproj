@@ -8,4 +8,11 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Resource Include="Fonts\Lato-Regular.ttf" />
+	  <Resource Include="Fonts\Lato-Bold.ttf"/>
+	  <Resource Include="Fonts\Lato-Italic.ttf"/>
+	  <Resource Include="Fonts\Lato-Black.ttf"/>
+  </ItemGroup>
+
 </Project>

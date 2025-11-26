@@ -32,7 +32,7 @@
                Text="Der er et nyt event. Klik her og tilmeld dig allerede i dag!"
                FontSize="25" Margin="5"/>
                 <TextBlock TextWrapping="Wrap"
-               Text="Ny øvelse, du kan afprøve nu, den tager kun 3 minutter."
+               Text="Ny øvelse, du kan afprøve nu, den tager kun 3 minutter.1"
                FontSize="25" Margin="5"/>
                 <TextBlock TextWrapping="Wrap"
                Text="Der er tilføjet en irriterende pop-up vindue, for at lette din fede røv!"
