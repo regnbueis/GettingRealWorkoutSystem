@@ -10,11 +10,12 @@ namespace UmbracoWorkoutSystem.ViewModels
 {
     public class ExerciseController
     {
-        public Tags ExerciseTagList()
+        public List<string> ExerciseTagList()
         {
+
             Tags tags = new Tags();
 
-            return tags;
+            return tags.Taglist;
         }
 
         public List<Exercise> ChooseMuscleGroup(string tag)
