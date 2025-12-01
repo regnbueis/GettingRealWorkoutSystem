@@ -9,6 +9,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="View\Pictures\ExcorciseBanner.png" />
+    <None Remove="View\Pictures\FrontPageBanner1.png" />
+    <None Remove="View\Pictures\office-workers-do-yoga-exercises-260nw-2450907999.png" />
+    <None Remove="View\Pictures\SkureHans.png" />
+    <None Remove="View\Pictures\umbraco_wide_logo_blue.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Pictures\ExcorciseBanner.png" />
+    <Resource Include="View\Pictures\FrontPageBanner1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\Lato-Regular.ttf" />
+	  <Resource Include="Fonts\Lato-Bold.ttf" />
+	  <Resource Include="Fonts\Lato-Italic.ttf" />
+	  <Resource Include="Fonts\Lato-Black.ttf" />
+	  <Resource Include="View\Pictures\office-workers-do-yoga-exercises-260nw-2450907999.png" />
+	  <Resource Include="View\Pictures\SkureHans.png" />
+	  <Resource Include="View\Pictures\umbraco_wide_logo_blue.png" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
 

@@ -25,18 +25,20 @@ namespace UmbracoWorkoutSystem
 
         private void btnØvelser_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new ExercisePage());
+            MainFrame.Navigate(new ExerciseTypePage());
         }
 
         private void btnEvents_Click(object sender, RoutedEventArgs e)
         {
 
         }
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+      
+        private void logoHome_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new HomePage());
+
         }
-        
+
     }
 }
     

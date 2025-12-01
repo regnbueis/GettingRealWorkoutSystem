@@ -12,20 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UmbracoWorkoutSystem.View;
 
 namespace UmbracoWorkoutSystem.View
 {
     /// <summary>
-    /// Interaction logic for ExercisePage.xaml
+    /// Interaction logic for ExerciseTypePage.xaml
     /// </summary>
-    public partial class ExercisePage : Page
+    public partial class ExerciseTypePage : Page
     {
-        public ExercisePage()
+        public ExerciseTypePage()
         {
             InitializeComponent();
+            
         }
 
-       
+        private void Test_Click(object sender, RoutedEventArgs e)
+        {
 
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow.MainFrame.Navigate(new ExercisePage());
+
+        }
     }
 }

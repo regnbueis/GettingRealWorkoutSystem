@@ -8,8 +8,8 @@
              d:DesignHeight="800" d:DesignWidth="1000"
   Title="HomePage" Background="#f1f0ee">
     <Grid>
-        <Image Source="C:\Users\Martin\Desktop\FrontPageBanner1.png"
-   Width="640" Height="140"
+        <Image Source="/View/Pictures/FrontPageBanner1.png"
+        Width="640" Height="140"
    HorizontalAlignment="Center"
    VerticalAlignment="Top"
    Stretch="UniformToFill"
@@ -32,11 +32,11 @@
                Text="Der er et nyt event. Klik her og tilmeld dig allerede i dag!"
                FontSize="25" Margin="5"/>
                 <TextBlock TextWrapping="Wrap"
-               Text="Ny øvelse, du kan afprøve nu, den tager kun 3 minutter."
-               FontSize="25" Margin="5"/>
+               Text="Ny øvelse, du kan afprøve nu, den tager kun 3 minutter.1"
+               FontSize="25" Margin="5" RenderTransformOrigin="0.477,2.561"/>
                 <TextBlock TextWrapping="Wrap"
                Text="Der er tilføjet en irriterende pop-up vindue, for at lette din fede røv!"
-               FontSize="25" Margin="5"/>
+               FontSize="25"/>
             </StackPanel>
         </Border>
 

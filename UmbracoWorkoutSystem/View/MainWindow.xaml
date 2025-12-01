@@ -22,6 +22,9 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+                <Button BorderThickness="0" Background="Transparent" Click="logoHome_Click">
+                    <Image x:Name="logoHome" Source="/View/Pictures/umbraco_wide_logo_blue.png" Stretch="Uniform" Grid.Column="0" Margin="15,-2,10,-3"/>
+                </Button>
                 <Image Source="C:\Users\nnord\Downloads\umbraco_wide_logo_blue.png" Stretch="Uniform" MouseDown="Image_MouseDown" Grid.Column="0" Margin="15,-2,10,-3"/>
                 <Button x:Name="btnØvelser" Grid.Column="1" Content="Øvelser" Click="btnØvelser_Click"/>
                 <Button x:Name="btnEvents" Grid.Column="2" Content="Events" IsEnabled="False" Click="btnEvents_Click"/>

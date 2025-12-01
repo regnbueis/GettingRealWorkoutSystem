@@ -1,0 +1,35 @@
+﻿<Page x:Class="UmbracoWorkoutSystem.View.ExerciseTypePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UmbracoWorkoutSystem.View"
+      mc:Ignorable="d" 
+        d:DesignHeight="730" d:DesignWidth="1000"
+  Title="ExercisePage" Background="#f1f0ee">
+    <Grid Margin="0,0,0,557">
+        <Grid Margin="10,10,-10,-10">
+            <Image Source="/View/Pictures/ExcorciseBanner.png" Width="640" Height="140" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="UniformToFill" Margin="10"/>
+        </Grid>
+        <Grid Margin="36,309,34,-511">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="listbox" Margin="0,0,200,0"/>
+            <ListBox Margin="403,0,10,0" Grid.ColumnSpan="2" />
+
+        </Grid>
+        <Grid Margin="10,205,-10,-131">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="443*"/>
+                <ColumnDefinition Width="557*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Tryk op en type, for at finde en øvelse" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="352" Height="45" FontSize="20"/>
+            <Label Content="Tryk på den ønskede øvelse" Margin="101,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Width="336" Height="45" FontSize="20" Grid.Column="1"/>
+            <Button x:Name="Test" Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="479,52,0,0" VerticalAlignment="Top" Height="22" Width="22" Click="Test_Click"/>
+
+        </Grid>
+    </Grid>
+
+</Page>

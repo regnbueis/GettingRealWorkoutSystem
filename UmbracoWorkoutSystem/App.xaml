@@ -4,7 +4,15 @@
              xmlns:local="clr-namespace:UmbracoWorkoutSystem"
              StartupUri="View/MainWindow.xaml">
     <Application.Resources>
-               <Style x:Key="FocusVisual">
+        <Style TargetType="Control">
+            <Setter Property="FontFamily" Value="/UmbracoWorkoutSystem;component/Fonts/Lato-Regular.ttf#Lato"/>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="/UmbracoWorkoutSystem;component/Fonts/Lato-Regular.ttf#Lato"/>
+        </Style>
+
+        <Style x:Key="FocusVisual">
                 <Setter Property="Control.Template">
                     <Setter.Value>
                         <ControlTemplate>
