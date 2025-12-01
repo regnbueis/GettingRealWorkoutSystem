@@ -28,5 +28,19 @@ namespace UmbracoWorkoutSystem.ViewModels
             Persistence.LogRepository.Initialize();
         }
 
+        private Event _nextEvent;
+
+        public Event NextEvent
+        {
+            get { return _nextEvent; }
+            set { _nextEvent = value; }
+        }
+
+        public void GetUpcomingEvent()
+        {
+            Event nextEvent = EventController.UpcomingEvent();
+            NextEvent = nextEvent;
+        }
+
     }
 }

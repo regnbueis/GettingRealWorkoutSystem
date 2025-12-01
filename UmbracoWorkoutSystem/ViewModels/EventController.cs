@@ -10,7 +10,7 @@ namespace UmbracoWorkoutSystem.ViewModels
 {
     public class EventController
     {
-        public Event UpcomingEvent()
+        public static Event UpcomingEvent()
         {
             Event result = new Event();
             List<Event> events = EventRepository.UpcomingEvents();

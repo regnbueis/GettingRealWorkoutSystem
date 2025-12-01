@@ -25,20 +25,19 @@
             </StackPanel>
         </Border>
 
-        <Border BorderBrush="#283a97" BorderThickness="2" Margin="532,176,20,20">
-            <StackPanel>
-                <Label Content="News!" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center"/>
-                <TextBlock TextWrapping="Wrap"
-               Text="Der er et nyt event. Klik her og tilmeld dig allerede i dag!"
-               FontSize="25" Margin="5"/>
-                <TextBlock TextWrapping="Wrap"
-               Text="Ny øvelse, du kan afprøve nu, den tager kun 3 minutter.1"
-               FontSize="25" Margin="5" RenderTransformOrigin="0.477,2.561"/>
-                <TextBlock TextWrapping="Wrap"
-               Text="Der er tilføjet en irriterende pop-up vindue, for at lette din fede røv!"
-               FontSize="25"/>
-            </StackPanel>
-        </Border>
+        <Grid Margin="524,176,32,20">
+
+            <Border BorderBrush="#283a97" BorderThickness="2" >
+                <TextBlock x:Name="NewsDate" TextWrapping="Wrap" Text="{Binding NextEvent.Date}" Margin="0,112,0,454" HorizontalAlignment="Center" FontSize="17" />
+
+            </Border>
+            <TextBlock x:Name="NewsTitle" TextWrapping="Wrap" Text="Title" Margin="0,62,0,512" HorizontalAlignment="Center" FontWeight="Bold" FontSize="25"/>
+            <TextBlock x:Name="NewsDescribtion" Text="{Binding NextEvent.Description, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Margin="43,194,43,264" FontSize="17" />
+
+
+
+        </Grid>
+        <Image x:Name="NewsImg" HorizontalAlignment="Left" Height="154" Margin="624,556,0,0" VerticalAlignment="Top" Width="266"/>
 
     </Grid>
 </Page>
