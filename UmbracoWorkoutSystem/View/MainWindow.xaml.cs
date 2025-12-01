@@ -9,6 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using UmbracoWorkoutSystem.View;
+using UmbracoWorkoutSystem.ViewModels;
 
 namespace UmbracoWorkoutSystem
 {
@@ -17,8 +18,11 @@ namespace UmbracoWorkoutSystem
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        MainViewModel mvm = new MainViewModel();
         public MainWindow()
         {
+            DataContext = mvm;
             InitializeComponent();
             MainFrame.Navigate(new HomePage());
         }
