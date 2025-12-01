@@ -1,20 +1,20 @@
-﻿using Microsoft.VisualBasic;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UmbracoWorkoutSystem.Models;
 
-namespace UmbracoWorkoutSystem.Domain
+namespace UmbracoWorkoutSystem.Persistence
 {
-    public static class Persistence
+    public static class Persist
     {
         public static List<Exercise> exercises;
         public static List<Event> events;
         public static List<AltWorkType> altWorkTypes;
 
-        public static void InitializeRepository()
+        public static void Initialize()
         {
             exercises = new List<Exercise>();
             events = new List<Event>();
@@ -90,7 +90,7 @@ namespace UmbracoWorkoutSystem.Domain
             }
             catch
             {
-                throw (new Exception("Save not succesful"));
+                throw new Exception("Save not succesful");
             }
         }
     }

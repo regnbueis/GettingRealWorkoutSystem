@@ -29,6 +29,7 @@
 	  <Resource Include="View\Pictures\office-workers-do-yoga-exercises-260nw-2450907999.png" />
 	  <Resource Include="View\Pictures\SkureHans.png" />
 	  <Resource Include="View\Pictures\umbraco_wide_logo_blue.png" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
 
 </Project>

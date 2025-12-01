@@ -4,14 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UmbracoWorkoutSystem.Models;
 
-namespace UmbracoWorkoutSystem.Domain
+namespace UmbracoWorkoutSystem.Persistence
 {
-    public class EventRepository
+    public static class EventRepository
     {
-        private List<Event> events = new List<Event>();
-
-        public Event AddEvent(string title, string description, DateTime date, string source)
+        public static Event Add(string title, string description, DateTime date, string source)
         {
             Event result = null;
 
@@ -27,7 +26,7 @@ namespace UmbracoWorkoutSystem.Domain
                     Date = date,
                     ImageSource = source
                 };
-                Persistence.events.Add(result);
+                Persistence.Persist.events.Add(result);
             }
             else
                 throw new ArgumentException("Not all arguments are valid");
@@ -35,9 +34,9 @@ namespace UmbracoWorkoutSystem.Domain
             return result;
         }
 
-        public void EditEvent(int id, string title, string description, DateTime date, string source)
+        public static void Edit(int id, string title, string description, DateTime date, string source)
         {
-            Event _event = Get(id);
+            Event _event = GetById(id);
 
             if (_event != null)
             {
@@ -56,31 +55,48 @@ namespace UmbracoWorkoutSystem.Domain
                         _event.ImageSource = source;
                 }
                 else
-                    throw new ArgumentException("Not all arguments for exercise are valid");
+                    throw new ArgumentException("Not all arguments are valid");
             }
             else
                 throw new ArgumentException("Event with ID " + id + " not found");
         }
 
-        public void DeleteEvent(int id)
+        public static void Delete(int id)
         {
-            Event _event = Get(id);
+            Event _event = GetById(id);
             if (_event != null)
-                Persistence.events.Remove(_event);
+                Persistence.Persist.events.Remove(_event);
             else
                 throw new ArgumentException("Event with ID " + id + " not found");
         }
 
-        public Event Get(int id)
+        public static Event GetById(int id)
         {
             Event result = null;
 
-            foreach (Event e in Persistence.events)
+            foreach (Event e in Persistence.Persist.events)
             {
                 if (e.EventId == id)
                     result = e;
             }
             return result;
+        }
+
+        public static List<Event> UpcomingEvents()
+        {
+            List<Event> nextEvents = new List<Event>();
+
+            try
+            {
+                foreach (Event e in Persistence.Persist.events)
+                {
+                    if (e.Date > DateTime.Now)
+                        nextEvents.Add(e);
+                }
+            }
+            catch { }
+
+            return nextEvents;
         }
 
     }

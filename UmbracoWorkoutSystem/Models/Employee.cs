@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UmbracoWorkoutSystem.Domain
+namespace UmbracoWorkoutSystem.Models
 {
     public class Employee
     {
@@ -21,6 +21,15 @@ namespace UmbracoWorkoutSystem.Domain
             EmployeeId = idCount++;
             Name = name;
             Admin = admin;
+        }
+        public Employee() 
+        { 
+            EmployeeId = idCount++;
+        }
+
+        public static void SetId(int id)
+        {
+            idCount = id;
         }
     }
 }
