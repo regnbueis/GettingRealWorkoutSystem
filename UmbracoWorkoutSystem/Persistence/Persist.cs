@@ -21,7 +21,7 @@ namespace UmbracoWorkoutSystem.Persistence
             altWorkTypes = new List<AltWorkType>();
             try
             {
-                using StreamReader sr = new StreamReader("ContentPersistence.txt");
+                using StreamReader sr = new StreamReader("ContentPersistence.txt.txt");
                 {
                     string line = sr.ReadLine();
 

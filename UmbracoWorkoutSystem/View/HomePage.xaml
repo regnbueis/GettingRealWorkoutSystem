@@ -28,10 +28,10 @@
         <Grid Margin="524,176,32,20">
 
             <Border BorderBrush="#283a97" BorderThickness="2" >
-                <TextBlock x:Name="NewsDate" TextWrapping="Wrap" Text="{Binding NextEvent.Date}" Margin="0,112,0,454" HorizontalAlignment="Center" FontSize="17" />
+                <TextBlock x:Name="NewsDate" TextWrapping="Wrap" Text="{Binding NextEvent.Date, UpdateSourceTrigger=PropertyChanged}" Margin="0,112,0,454" HorizontalAlignment="Center" FontSize="17" Width="66" />
 
             </Border>
-            <TextBlock x:Name="NewsTitle" TextWrapping="Wrap" Text="Title" Margin="0,62,0,512" HorizontalAlignment="Center" FontWeight="Bold" FontSize="25"/>
+            <TextBlock x:Name="NewsTitle" TextWrapping="Wrap" Text="{Binding NextEvent.Title}" Margin="0,62,0,512" HorizontalAlignment="Center" FontWeight="Bold" FontSize="25" Width="134"/>
             <TextBlock x:Name="NewsDescribtion" Text="{Binding NextEvent.Description, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Margin="43,194,43,264" FontSize="17" />
 
 

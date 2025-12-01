@@ -1,16 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using UmbracoWorkoutSystem.Models;
 
 namespace UmbracoWorkoutSystem.ViewModels
 {
-    public class MainViewModel
+    public class MainViewModel : INotifyPropertyChanged
     {
         private int ChosenTag = 0;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        
+
         //TODO:
         //det her handler om, at vi ville prøve at gemme hvilket tag, brugeren har valgt,
         //så man i skiftet fra øvelsesviewet med listerne af hhv. tags og sorterede øvelser

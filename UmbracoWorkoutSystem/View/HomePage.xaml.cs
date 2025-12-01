@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UmbracoWorkoutSystem.ViewModels;
 
 namespace UmbracoWorkoutSystem.View
 {
@@ -20,9 +21,15 @@ namespace UmbracoWorkoutSystem.View
     /// </summary>
     public partial class HomePage : Page
     {
+        MainViewModel mvm = new MainViewModel();
         public HomePage()
         {
             InitializeComponent();
+
+            mvm.StartUp();
+            mvm.GetUpcomingEvent();
+
+            DataContext = mvm;
         }
     }
 }

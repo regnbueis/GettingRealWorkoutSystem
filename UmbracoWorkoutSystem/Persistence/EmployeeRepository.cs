@@ -22,7 +22,7 @@ namespace UmbracoWorkoutSystem.Persistence
             {
                 int employeeid = 0;
 
-                using StreamReader sr = new StreamReader("EmployeePersistence.txt");
+                using StreamReader sr = new StreamReader("EmployeePersistence.txt.txt");
                 {
                     string line = sr.ReadLine();
 
